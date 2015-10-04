@@ -23,7 +23,7 @@ render(
       <DevTools store={store} monitor={DiffMonitor} />
     </DebugPanel>
     <Provider store={store}>
-      <App></App>
+      <App />
     </Provider>
   </div>,
   document.querySelector('main')
