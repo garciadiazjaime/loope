@@ -42,6 +42,30 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ['react-hot', 'babel?cacheDirectory&stage=0&optional=runtime'],
       },
+      {
+        test: /\.css$/,
+        loader: 'style!css',
+      },
+      {
+        test: /bootstrap\/js\//,
+        loader: 'imports?jQuery=jquery',
+      },
+      {
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff',
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/octet-stream',
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file',
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=image/svg+xml',
+      },
     ],
   },
 
@@ -49,7 +73,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('common', 'common.js'),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      templateContent: '<html><head><style>button{padding:6px;margin:1px;}</style></head><body><main></main></body></html>',
+      template: 'src/views/layout.html',
       inject: true,
     }),
     new webpack.NoErrorsPlugin(),

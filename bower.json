@@ -1,0 +1,22 @@
+{
+  "name": "loope",
+  "version": "0.0.0",
+  "authors": [
+    "Jaime Garcia <jgarciaqo@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~4.0.0"
+  }
+}
